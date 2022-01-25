@@ -46,6 +46,8 @@
 
 ## Índice
 
+- [Customização do Windows Terminal][1]
+
 ## Contribuindo
 
 Se você quer contribuir com este projeto e aprimorá-lo, sua ajuda é sempre bem vinda!
@@ -84,6 +86,7 @@ Distribuída por **MIT License**. Veja [LICENSE](https://github.com/JonathanTSil
 
 <!-- MARKDOWN LINKS>
 <!-- SITES -->
+[1]: https://github.com/JonathanTSilva/HL-Windows/blob/main/Articles/Customiza%C3%A7%C3%A3o%20do%20Windows%20Terminal.md
 
 <!-- IMAGES -->
 
