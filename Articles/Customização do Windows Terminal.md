@@ -13,6 +13,10 @@
     - [... pelo `Executar`](#-pelo-executar)
     - [... pelo explorador de arquivos](#-pelo-explorador-de-arquivos)
   - [Instalar o WSL (Windows Subsystem for Linux)](#instalar-o-wsl-windows-subsystem-for-linux)
+  - [Oh My Posh](#oh-my-posh)
+    - [Instalação](#instalação)
+  - [Configurando o Windows Terminal](#configurando-o-windows-terminal)
+    - [Tornar o Windows Terminal como padrão](#tornar-o-windows-terminal-como-padrão)
 
 
 O Windows Terminal oferece uma experiência de linha de comando muito aprimorada no Windows 10 (superior). Está repleto de características úteis como uma aceleração de GPU, tabs, painéis, temas e atalhos, além de um suporte completo para diferentes ambientes, tal como o PowerShell, Prompt de Comando e WSL. Neste artigo, será descrito algumas maneiras de adaptar as experiências com o terminal de acordo com suas necessidades, alé, de dicas e truques para tornar sua experiência muito melhor.
@@ -21,7 +25,7 @@ O aplicativo do Windows Terminal está disponível na Microsoft Store, mas tamb�
 
 Uma vez instalado, ao inciar o Windows Terminal será criado um perfil padrão que mostrará os seus shells na ordem: PowerShell, Prompt de Comando, todas as distribuições WSL instaladas e o Azure Cloud Shell. Ao final deste artigo, você conseguirá atualizá-lo de acordo com sua preferência.
 
-O primeiro passo a ser realizado é instalar todas os shells que você precisa, incluindo as distribuições WSL e o novo PowerShell. Todas elas podem ser baixadas pela Microsoft Store. Entretanto, antes de baixar suas distribuições, o WSL deve estar instalado e configurado em sua estação de trabalho.
+O primeiro passo a ser realizado é instalar todas os shells que você precisa, incluindo as **distribuições WSL** e o novo **PowerShell**. Todas elas podem ser baixadas pela Microsoft Store. Entretanto, antes de baixar suas distribuições, o WSL deve estar instalado e configurado em sua estação de trabalho.
 
 ## Abrindo o Windows Terminal ...
 
@@ -74,11 +78,11 @@ Esta dica é muito útil para aqueles que não tem a opção do Windows Terminal
 
 ## Instalar o WSL (Windows Subsystem for Linux)
 
-A princípio, em uma instalação mais antiga, era necessário configurar sua estação para receber a virtualização por WSL, habilitando os recursos opcionais **"Plataforma de Maquina Virtual"** e **"Subsistema do Windows para Linux"**. Entretando, o WSL atual já realiza a instalação automática de todas as dependências necessárias. Todavia, abaixo está como podemos ativar estes recursos manualmente, apresentando duas maneiras de realizar tal ativação: Por linha de comando e pelo programa **Recursos do Windows**.
+A princípio, em uma instalação mais antiga, era necessário configurar sua estação para receber a virtualização por WSL, habilitando os recursos opcionais **"Plataforma de Maquina Virtual"** e **"Subsistema do Windows para Linux"**. Entretanto, o WSL atual já realiza a instalação automática de todas as dependências necessárias. Todavia, abaixo está como podemos ativar estes recursos manualmente, apresentando duas maneiras de realizar tal ativação: Por linha de comando e pelo programa **Recursos do Windows**.
 
 * Por linha de comando:
 
-```zsh
+```powershell
 Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux
 ```
 
@@ -88,7 +92,7 @@ Abra o **Recursos do Windows** e ative os itens **"Plataforma de Maquina Virtual
 
 Sem mais delongas, é possível instalar tudo o que precisa para executar o WSL (Subsistema do Windows para Linux) inserindo este comando no PowerShell administrador ou no prompt de comando do Windows e reiniciando o computador:
 
-```zsh
+```powershell
 wsl --install
 ```
 
@@ -100,20 +104,58 @@ Na primeira vez que você iniciar uma distribuição do Linux recém-instalada, 
 
 Para instalar outras distribuições Linux, assim como já dito, fazê-la pela Microsoft Store. Caso queira listar os sistemas disponíveis no WSL ou aqueles que estão rodando do subsistema Windows, executar os comandos:
 
-```zsh
+```powershell
 wsl --list --all
 wsl --list --running
 ```
 
 O comando `wsl --shutdown` é um caminho rápido para reiniciar as distribuições do WSL 2, mas ele desligará todas as distribuições em execução e, portanto, será usado com sabedoria.
 
+> **Nota:** lembre de instalar o novo **Powershell** na loja da Microsoft para melhorar sua experiência.
 
+## Oh My Posh
+
+### Instalação
+
+O Oh My Posh é uma engine customizada de prompt para qualquer shell que apresenta a habilidade de ajustar a string do prompt como uma variável ou função.
+
+> **Nota:** para mostrar todos os ícones, é recomendado a utilização de alguma [Nerd Font][6].
+
+Há diversas formas de realizar a instalação do Oh My Posh, podendo ser acompanhadas pela [página principal do projeto][4], ou pela [galeria de pacotes do PowerShell][5].
+
+Utilizando o `winget` (Windows Package Manager CLI - gerenciador de pacotes da Microsoft), apenas execute o comando abaixo em seu prompt:
+
+```powershell
+winget install JanDeDobbeleer.OhMyPosh
+```
+
+Isso instala o `oh-my-posh.exe` e os últimos [temas do Oh My Posh][7].
+
+
+## Configurando o Windows Terminal
+
+Ao abrir o Windows Terminal, percebe-se que as configurações podem ser alteradas de duas formas: pela interface de usuário ou pelo arquivo de configurações. Para fins didáticos, todas as alterações aqui realizadas serão expostas por código para serem alteradas no arquivo de configuração `settings.json`. Para quaisquer outras dúvidas não solucionadas neste tópico, verifique a [documentação do Windows Terminal][8].
+
+### Tornar o Windows Terminal como padrão
+
+Essa opção foi implementada apenas no Windows 11, por enquanto, e não possui um parâmetro para configuração dentro do arquivo `settings.json`, sendo assim obrigatória a modificação apenas por interface GUI.
+
+
+
+```json
+
+``` 
 
 <!-- Markdown Links -->
 <!-- SITES -->
 [1]: https://github.com/microsoft/terminal/releases
 [2]: https://www.autohotkey.com/
 [3]: https://www.autohotkey.com/docs/FAQ.htm#Startup
+[4]: https://ohmyposh.dev/docs/windows
+[5]: https://www.powershellgallery.com/packages/oh-my-posh/7.5.1
+[6]: https://ohmyposh.dev/docs/config-fonts
+[7]: https://ohmyposh.dev/docs/themes
+[8]: https://aka.ms/terminal-documentation
 
 <!-- IMAGES -->
 [wsl-installation]: ../Images/wsl-installation.png
