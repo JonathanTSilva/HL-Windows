@@ -36,8 +36,7 @@
 <details close="close" align="center">
   <summary><b>Sumário</b></summary>
           <a href="#sobre-o-projeto">Sobre o Projeto</a> |
-          <a href="#primeiros-passos">Primeiros Passos</a> |
-          <a href="#guia-rápido">Guia Rápido</a> |
+          <a href="#índice">Índice</a> |
           <a href="#contribuindo">Contribuindo</a> |
           <a href="#licença">Licença</a> |
           <a href="#contato">Contato</a>
@@ -46,8 +45,6 @@
 ## Sobre o Projeto
 
 ## Índice
-
-
 
 ## Contribuindo
 
@@ -61,7 +58,7 @@ Se você quer contribuir com este projeto e aprimorá-lo, sua ajuda é sempre be
 - Se você criou o _fork_ há algum tempo, certifique-se de realizar pull das alterações no seu repositório local;
 - Criar um nova _branch_ para trabalhar nela! Ramifique da `develop`, se existir; caso contrário, crie da `main`;
 - Implementar/corrigir sua _feature_, não esquecendo de comentar o seu código;
-- Siga o estilo de código do projeto em questão, inclusive a identação;
+- Siga o estilo de código do projeto em questão, inclusive a indentação;
 - Se o projeto apresentar testes, execute-os;
 - Escreva ou adapte os testes, conforme necessário;
 - Adicionar ou alterar a documentação, conforme necessário;
