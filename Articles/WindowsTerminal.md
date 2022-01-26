@@ -1,11 +1,11 @@
-<!-- Simple logo -->
-<a href="#customização-do-windows-terminal"><img width="200px" src="https://res.cloudinary.com/practicaldev/image/fetch/s--oU6tDKnH--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/i/x9t7lxm2kvwliuy4yh73.png" align="right" /></a>
+<!-- RIGHT LOGO -->
+<a href="#customização-do-windows-terminal"><img width="100px" src="https://res.cloudinary.com/practicaldev/image/fetch/s--oU6tDKnH--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/i/x9t7lxm2kvwliuy4yh73.png" align="right" /></a>
 
 # Customização do Windows Terminal
 
- Um guia de como customizar o Windows Terminal.
+:gear: Um guia de como customizar o Windows Terminal.
 
-<!-- Table of Contents -->
+<!-- TABLE OF CONTENTS -->
 - [Customização do Windows Terminal](#customização-do-windows-terminal)
   - [Abrindo o Windows Terminal ...](#abrindo-o-windows-terminal-)
     - [... por atalho](#-por-atalho)
@@ -17,7 +17,6 @@
     - [Instalação](#instalação)
   - [Configurando o Windows Terminal](#configurando-o-windows-terminal)
     - [Tornar o Windows Terminal como padrão](#tornar-o-windows-terminal-como-padrão)
-
 
 O Windows Terminal oferece uma experiência de linha de comando muito aprimorada no Windows 10 (superior). Está repleto de características úteis como uma aceleração de GPU, tabs, painéis, temas e atalhos, além de um suporte completo para diferentes ambientes, tal como o PowerShell, Prompt de Comando e WSL. Neste artigo, será descrito algumas maneiras de adaptar as experiências com o terminal de acordo com suas necessidades, alé, de dicas e truques para tornar sua experiência muito melhor.
 
@@ -131,7 +130,6 @@ winget install JanDeDobbeleer.OhMyPosh
 
 Isso instala o `oh-my-posh.exe` e os últimos [temas do Oh My Posh][7].
 
-
 ## Configurando o Windows Terminal
 
 Ao abrir o Windows Terminal, percebe-se que as configurações podem ser alteradas de duas formas: pela interface de usuário ou pelo arquivo de configurações. Para fins didáticos, todas as alterações aqui realizadas serão expostas por código para serem alteradas no arquivo de configuração `settings.json`. Para quaisquer outras dúvidas não solucionadas neste tópico, verifique a [documentação do Windows Terminal][8].
@@ -140,13 +138,11 @@ Ao abrir o Windows Terminal, percebe-se que as configurações podem ser alterad
 
 Essa opção foi implementada apenas no Windows 11, por enquanto, e não possui um parâmetro para configuração dentro do arquivo `settings.json`, sendo assim obrigatória a modificação apenas por interface GUI.
 
-
-
 ```json
+dsg
+```
 
-``` 
-
-<!-- Markdown Links -->
+<!-- MARKDOWN LINKS -->
 <!-- SITES -->
 [1]: https://github.com/microsoft/terminal/releases
 [2]: https://www.autohotkey.com/
