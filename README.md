@@ -35,14 +35,16 @@
 <!-- TABLE OF CONTENTS -->
 <details close="close" align="center">
   <summary><b>Sumário</b></summary>
-          <a href="#sobre-o-projeto">Sobre o Projeto</a> |
-          <a href="#índice">Índice</a> |
-          <a href="#contribuindo">Contribuindo</a> |
-          <a href="#licença">Licença</a> |
-          <a href="#contato">Contato</a>
+    <a href="#sobre-o-projeto">Sobre o Projeto</a> |
+    <a href="#índice">Índice</a> |
+    <a href="#contribuindo">Contribuindo</a> |
+    <a href="#licença">Licença</a> |
+    <a href="#contato">Contato</a>
 </details>
 
 ## Sobre o Projeto
+
+Este projeto pertence à uma série de repositórios denominada HomeLab. Essa sequência foi criada a fim de agrupar todos os estudos realizados em determinada area, neste caso, o Windows. Documenta toda a experiência de um iniciante neste kernel, contendo _insights_, dicas, resoluções de problemas e muitas outras coisas interessantes que fazem valer a pena o consumo e contribuição ao projeto **HomeLab - Windows**! Aproveite e sinta-se a vontade para comentar, tirar suas dúvidas, criticar e, principalmente, contribuir. :window:
 
 ## Índice
 
@@ -50,7 +52,7 @@
 
 ## Contribuindo
 
-Se você quer contribuir com este projeto e aprimorá-lo, sua ajuda é sempre bem vinda!
+Se você quer contribuir com este projeto e aprimorá-lo, sua ajuda é sempre bem vinda! :tada:
 
 **Como fazer um _pull request_ corretamente:**
 
