@@ -7,7 +7,7 @@
 
 <!-- TABLE OF CONTENTS -->
 - [Customização do Windows Terminal](#customização-do-windows-terminal)
-  - [Abrindo o Windows Terminal ...](#abrindo-o-windows-terminal-)
+  - [Abrindo o Windows Terminal](#abrindo-o-windows-terminal)
     - [... por atalho](#-por-atalho)
     - [... por atalho personalizado](#-por-atalho-personalizado)
     - [... pelo `Executar`](#-pelo-executar)
@@ -26,7 +26,7 @@ Uma vez instalado, ao inciar o Windows Terminal será criado um perfil padrão q
 
 O primeiro passo a ser realizado é instalar todas os shells que você precisa, incluindo as **distribuições WSL** e o novo **PowerShell**. Todas elas podem ser baixadas pela Microsoft Store. Entretanto, antes de baixar suas distribuições, o WSL deve estar instalado e configurado em sua estação de trabalho.
 
-## Abrindo o Windows Terminal ...
+## Abrindo o Windows Terminal
 
 Apesar desta seção parecer um tanto quanto dispensável, aqui serão expostas diversas maneiras e dicas para agilizar o processo na hora de abrir o terminal. Algumas são tão simples que vale apenas relembrar, como abrir pelo menu `Pesquisar`, pelo menu `Iniciar` ou `WinX` (no caso do Windows 11), e pelo menu de contexto, ao clicar com o botão direito em uma pasta no explorador de arquivos e selecionar `Abrir no Terminal do Windows`.
 
@@ -79,13 +79,13 @@ Esta dica é muito útil para aqueles que não tem a opção do Windows Terminal
 
 A princípio, em uma instalação mais antiga, era necessário configurar sua estação para receber a virtualização por WSL, habilitando os recursos opcionais **"Plataforma de Maquina Virtual"** e **"Subsistema do Windows para Linux"**. Entretanto, o WSL atual já realiza a instalação automática de todas as dependências necessárias. Todavia, abaixo está como podemos ativar estes recursos manualmente, apresentando duas maneiras de realizar tal ativação: Por linha de comando e pelo programa **Recursos do Windows**.
 
-* Por linha de comando:
+- Por linha de comando:
 
 ```powershell
 Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux
 ```
 
-* Pelo software **Recursos do Windows**:
+- Pelo software **Recursos do Windows**:
 
 Abra o **Recursos do Windows** e ative os itens **"Plataforma de Maquina Virtual"** e **"Subsistema do Windows para Linux"**.
 
