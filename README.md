@@ -44,7 +44,7 @@
 
 ## Sobre o Projeto
 
-Este projeto pertence à uma série de repositórios denominada HomeLab. Essa sequência foi criada a fim de agrupar todos os estudos realizados em determinada area, neste caso, o Windows. Documenta toda a experiência de um iniciante neste kernel, contendo _insights_, dicas, resoluções de problemas e muitas outras coisas interessantes que fazem valer a pena o consumo e contribuição ao projeto **HomeLab - Windows**! Aproveite e sinta-se a vontade para comentar, tirar suas dúvidas, criticar e, principalmente, contribuir. :window:
+Este projeto pertence à uma série de repositórios denominada HomeLab. Essa sequência foi criada a fim de agrupar todos os estudos realizados em determinada area, neste caso, o Windows. Documenta toda a experiência de um iniciante neste kernel, contendo _insights_, dicas, resoluções de problemas e muitas outras coisas interessantes que fazem valer a pena o consumo e contribuição ao projeto **HomeLab - Windows**! Aproveite e sinta-se a vontade para comentar, tirar suas dúvidas, criticar e, principalmente, contribuir. ⊞
 
 ## Índice
 
