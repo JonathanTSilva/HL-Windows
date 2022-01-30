@@ -51,6 +51,7 @@
     - [Personalizar teclas de atalho](#personalizar-teclas-de-atalho)
     - [Configurar perfis SSH personalizados](#configurar-perfis-ssh-personalizados)
     - [Personalizar layout de inicialização](#personalizar-layout-de-inicialização)
+    - [Instalar o módulo Z](#instalar-o-módulo-z)
   - [Conclusão](#conclusão)
 
 O Windows Terminal oferece uma experiência de linha de comando muito aprimorada no Windows 10 (superior). Está repleto de características úteis como uma aceleração de GPU, tabs, painéis, temas e atalhos, além de um suporte completo para diferentes ambientes, tal como o PowerShell, Prompt de Comando e WSL. Neste artigo, será descrito algumas maneiras de adaptar as experiências com o terminal de acordo com suas necessidades, alé, de dicas e truques para tornar sua experiência muito melhor.
@@ -754,6 +755,18 @@ wt; split-pane -p "Windows PowerShell"
 - `split-pane` divide o painel atual em dois padrão `auto` se você não especificar uma direção (`-H` ou `-V`). O sinalizador `-p` permite que você especifique o tipo de perfil que deseja abrir por nome ou guid.
 
 Depois de definir seu layout de inicialização preferido, você pode vinculá-lo a uma tecla de atalho usando o [AutoHotkey][2] ou criar um novo atalho do Windows e fixá-lo na área de trabalho ou na barra de tarefas.
+
+### Instalar o módulo Z
+
+**Z** é um utilitário fantástico e simples para se mover entre os diretórios mais rápido. À medida que você se move em sua máquina na linha de comando, Z está adicionando os diretórios que você costuma visitar a um arquivo e, em seguida, usando esse arquivo para fornecer preenchimento automático instantâneo para que você possa voltar RÁPIDO.
+
+No Windows 10/11, o Z pode ser instalado como um módulo:
+
+```powershell
+Install-Module z -AllowClobber
+```
+
+Em seguida, basta adicionar `Import-Module z` ao final do seu perfil, geralmente em `$env:USERPROFILE\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1`.
 
 ## Conclusão
 
