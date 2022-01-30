@@ -29,6 +29,10 @@
       - [Trocar de fonte no terminal do VSCode](#trocar-de-fonte-no-terminal-do-vscode)
     - [Oh My Posh](#oh-my-posh)
       - [Instalação do Oh My Posh](#instalação-do-oh-my-posh)
+      - [Definindo o Oh My Posh como padrão](#definindo-o-oh-my-posh-como-padrão)
+      - [Alterando o tema](#alterando-o-tema)
+      - [Mostrando ícones nos diretórios e arquivos](#mostrando-ícones-nos-diretórios-e-arquivos)
+      - [Perfil totalmente personalizado](#perfil-totalmente-personalizado)
     - [Oh My Zsh](#oh-my-zsh)
       - [Instalando o Oh My Zsh](#instalando-o-oh-my-zsh)
       - [Alterando o tema e instalando temas externos](#alterando-o-tema-e-instalando-temas-externos)
@@ -355,21 +359,99 @@ No Visual Studio Code é possível também alterar de duas formas, por usuário 
 
 > [Nerd Font][6]
 
-O Oh My Posh é uma engine customizada de prompt para qualquer shell que apresenta a habilidade de ajustar a string do prompt como uma variável ou função.
+O Oh My Posh é uma engine customizada de prompt para qualquer shell que apresenta a habilidade de ajustar a string do prompt como uma variável ou função. Ele suporta todos os shells populares no Linux, macOS e Windows, incluindo **Bash**, **Fish**, **Zsh**, **Powershell** e outros, tornando possível obter um prompt consistente, mesmo que você alterne frequentemente entre diferentes shells.
 
 #### Instalação do Oh My Posh
 
-Há diversas formas de realizar a instalação do Oh My Posh, podendo ser acompanhadas pela [página principal do projeto][4], ou pela [galeria de pacotes do PowerShell][5].
+Neste artigo, o foco será sua utilização no PowerShell. Entretanto, há diversas formas de realizar a instalação do Oh My Posh, podendo ser acompanhadas pela [página principal do projeto][4], ou pela [galeria de pacotes do PowerShell][5].
 
-Utilizando o `winget` (Windows Package Manager CLI - gerenciador de pacotes da Microsoft), apenas execute o comando abaixo em seu prompt:
+> **Nota:** Ao usar oh-my-posh dentro do WSL, certifique-se de seguir o guia de instalação do linux .
+
+No Windows, utilizando o `winget` (Windows Package Manager CLI - gerenciador de pacotes da Microsoft), apenas execute o comando abaixo em seu prompt:
 
 ```powershell
 winget install JanDeDobbeleer.OhMyPosh
 ```
 
-Isso instala o `oh-my-posh.exe` e os últimos [temas do Oh My Posh][7].
+Isso instala o `oh-my-posh.exe` e os últimos [temas do Oh My Posh][7]. Para conferir, basta copiar este comando do executável no cmd e será possível visualizar sua interface. Porém, só realizar este procedimento não o colocará como a engine padrão do PowerShell.
 
+#### Definindo o Oh My Posh como padrão
 
+Para defini-lo como padrão do sistema, é necessário editar o script de perfil do PowerShell. Para encontrar a localização deste *profile*, basta dar o comando `echo` e para abrir, `notepad` ou o comando do seu editor de texto (`code`):
+
+```powershell
+echo $PROFILE
+notepad $PROFILE
+```
+
+Caso não tenha algum perfil criado, crie-o no diretório e com o mesmo nome retornado no primeiro comando, ou apenas escreva algo com `echo 'test' > $PROFILE`. Ao abrir, adicione a seguinte linha:
+
+```powershell
+oh-my-posh --init --shell pwsh --config $env:POSH_THEMES_PATH/jandedobbeleer.omp.json | Invoke-Expression
+```
+
+> **Nota:** se você instalou o Oh My Posh usando `Install-Module oh-my-posh`, é necessário primeiro importar o Oh My Posh no seu $PROFILE com `Import-Module oh - my - posh` antes de adicionar a linha acima
+
+Depois de adicionado, recarregue seu perfil para que as alterações entrem em vigor.
+
+```powershell
+. $PROFILE 
+```
+
+#### Alterando o tema
+
+O tema padãro **jandedobbeleer.omp.json** exibe os casos de uso mais comuns em seu prompt. No entanto, se você quer ir mais além para explorar funcionalidades adicionais, siga as etapas adicionais abaixo para te auxiliar neste começo.
+
+Explore os [temas oficiais do Oh My Posh][7]. Caso encontre algum que lhe agrade, basta conferir se ele já está baixado no diretório de temas (`~\AppData\Local\Programs\oh-my-posh\themes`) e alterar no arquivo de perfil do PowerShell, como exemplo abaixo:
+
+```powershell
+oh-my-posh --init --shell pwsh --config $env:POSH_THEMES_PATH/agnoster.omp.json | Invoke-Expression
+```
+
+Se gostou parcialmente do tema e quiser editá-lo, criando o seu próprio, leia primeiro todas as opções disponíveis, começando pelo [guia de configuração][21]. Você pode enviar o seu tema atual para o formato que desejar (`json`, `yaml` ou `toml`) que pode ser usado para ajustar e armazenar como seu tema personalizado.
+
+```powershell
+Export-PoshTheme - FilePath "~/.mytheme.omp.json" - Formato json  
+```
+
+Quando terminar de editar, ajuste o seu `$PROFILE` para usar o tema recém-criado.
+
+```powershell
+oh - meu - posh -- init -- shell pwsh -- config "~/.mytheme.omp.json" | Invocar-Expressão  
+```
+
+> **Nota:** Ao usar oh-my-posh no Windows e no WSL, saiba que você pode compartilhar seu tema com o WSL apontando para um tema na pasta pessoal do usuário do Windows. Dentro do WSL, substitua `~` pelo seguinte caminho: `/mnt/c/Users/<WINDOWSUSERNAME>`.
+> **Cuidado:** Para temas baixados e colocados naquele diretório de *themes* do Oh My Posh, é necessário adicionar o caminho inteiro do diretório, como `C:\Users\jonathan\AppData\Local\Programs\oh-my-posh\themes\ohmyposhv3-v2.json` ou a pasta em que ele se encontra.
+
+O tema que utilizo atualmente é o desenvolvido por **shanselman**, chamado **ohmyposhv3-v2.json** e está disponível na [página de gist][22] do desenvolvedor, assim como o arquivo `$PROFILE` personalizado.
+
+#### Mostrando ícones nos diretórios e arquivos
+
+Seu prompt não é suficiente? Isso porque sua listagem de diretórios precisa de cores e ícones!
+
+```powershell
+Install-Module -Name Terminal-Icons -Repository PSGallery
+```
+
+Em seguida, adicione uma linha ao meu `$PROFILE` (edite com `code $PROFILE`):
+
+```powershell
+Import-Module -Name Terminal-Icons
+```
+
+![icons][iconsDir]
+
+#### Perfil totalmente personalizado
+
+Para uma última personalização, utilizo o arquivo profile, também desenvolvido por [shanselman][22], que adiciona outros módulos como o PSReadLine. Entretanto, para sua utilização, são necessárias algumas alterações e downloads, que foram realizadas e disponibilizadas na minha aba de gist: https://gist.github.com/JonathanTSilva.
+
+Faça o download da versão mais recente do PSReadLine para evitar possíveis problemas. Sempre se atualize na [galeria do PowerShell][23].
+
+```PowerShell
+Install-Module -Name PSReadLine -RequiredVersion 2.1.0
+```
+
+Pronto! Seu PowerShell está totalmente personalizado. *Enjoy*!
 
 ### Oh My Zsh
 
@@ -701,9 +783,13 @@ Neste post, discutimos várias maneiras de personalizar o Windows Terminal. Espe
 [18]: https://github.com/powerline/fonts
 [19]: https://github.com/JonathanTSilva/HL-Linux/blob/main/Articles/terminalLinux.md
 [20]: https://github.com/ohmyzsh/ohmyzsh
+[21]: https://ohmyposh.dev/docs/config-overview
+[22]: https://gist.github.com/shanselman/
+[23]: https://www.powershellgallery.com/packages/PSReadLine/2.1.0
 
 <!-- IMAGENS -->
 [wsl-installation]: ../Images/wsl-installation.png
 [winTerminal-full]: ../Images/winTerminal.png
 [starship]: https://ik.imagekit.io/freshman/starship-fish_S9i51r-Tol.png
 [sshProfile]: https://ik.imagekit.io/freshman/windows-terminal-25_NTXSvREH3mQ_.png
+[iconsDir]: ../Images/iconsDir.png
