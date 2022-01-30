@@ -30,6 +30,12 @@
     - [Oh My Posh](#oh-my-posh)
       - [Instalação do Oh My Posh](#instalação-do-oh-my-posh)
     - [Oh My Zsh](#oh-my-zsh)
+      - [Instalando o Oh My Zsh](#instalando-o-oh-my-zsh)
+      - [Alterando o tema e instalando temas externos](#alterando-o-tema-e-instalando-temas-externos)
+      - [Instalando e habilitando plugins](#instalando-e-habilitando-plugins)
+        - [zsh-history-substring-search](#zsh-history-substring-search)
+        - [zsh-syntax-highlighting](#zsh-syntax-highlighting)
+        - [zsh-autosuggestions](#zsh-autosuggestions)
     - [Starship](#starship)
       - [Instalação do Starship](#instalação-do-starship)
       - [Configuração do shell para utilizar Starship](#configuração-do-shell-para-utilizar-starship)
@@ -363,9 +369,120 @@ winget install JanDeDobbeleer.OhMyPosh
 
 Isso instala o `oh-my-posh.exe` e os últimos [temas do Oh My Posh][7].
 
+
+
 ### Oh My Zsh
 
-> [Powerline Font][]
+> [Powerline Font][18]
+
+[Oh My Zsh][20] é uma estrutura agradável, de código aberto e orientada para a comunidade para gerenciar sua configuração Zsh. Vem com milhares de funções úteis, auxiliares, plugins, temas e algumas coisas que fazem você gritar. Suporta o shell Linux **Zsh**. Por isso, caso não tenha o ZSH instalado e nem como seu terminal padrão, aconselho a leitura da seção **Instalando o Zsh e alterando para shell padrão** do artigo [Customização do terminal do Linux][19]. Da mesma forma, leia a seção **Powerline Fonts** para acompanhar a instalação das fontes no ambiente Linux.
+
+#### Instalando o Oh My Zsh
+
+Toda a documentação mais detalhada pode ser lida na [página **Oh My Zsh** do GitHub][1].
+
+Seguindo o tutorial fornecido por eles, podemos instalá-lo utilizando `curl`, `wget` ou outra ferramenta similar.
+
+| Method    | Command                                                                                           |
+|:----------|:--------------------------------------------------------------------------------------------------|
+| **curl**  | `sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"` |
+| **wget**  | `sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"`   |
+| **fetch** | `sh -c "$(fetch -o - https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"` |
+
+```zsh
+sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+```
+
+Com isso, o Oh My Zsh estará instalado na sua máquina e assim que o terminal for aberto novamente, já estará ativado e o arquivo `.zshrc`, alterado.
+
+#### Alterando o tema e instalando temas externos
+
+Qualquer alteração a ser feita no Oh My Zsh, deve ser realizada dentro do arquivo `.zshrc`. Uma delas é a alteração de tema, na qual deve ser realizada alterando o valor do parâmetro a seguir com o nome das extensões fornecidas pelo zsh:
+
+```zsh
+ZSH_THEME="agnoster"
+```
+
+Se os temas padrão não forem do seu agrado, há a possibilidade de realizar a instalação de temas externo, desenvolvidos pela comunidade, podendo ser conferidos pela página do GitHub: [External-Links][2]. Cada um deles tem na descrição os passos para instalação e configuração. Alguns entre os mais utilizado são: zsh2000, powerlevel10k, powerlevel9k, bullet-train, classyTouch, agnosterzak, solus, blokkzh, imp.
+
+Para instalá-los, basta fazer o download do tema pelo GitHub, mover para a pasta `~/.oh-my-zsh/themes` e alterar a variável citada acima, dentro de `.zshrc`. Como exemplo, o download e importação do **powerlevel10k**:
+
+```zsh
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/.oh-my-zsh/themes/powerlevel10k
+echo 'source ~/.oh-my-zsh/themes/powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc
+```
+
+```zsh
+ZSH_THEME="powerlevel10k/powerlevel10k"
+```
+
+#### Instalando e habilitando plugins
+
+Existem vários plugins que poderão ser utilizados sem nenhuma instalação adicional. Para ver a lista de plugins que por padrão estão no diretório `~/.oh-my-zsh/plugins/` execute:
+
+```zsh
+cd ~/.oh-my-zsh/plugins/
+ls -a
+```
+
+Para configurar algum plugin já disponibilizado pelo Oh My Zsh, é necessário editar também o arquivo `~/.zshrc` adicionando ou removendo na matriz de variáveis os nomes dos plugins, por exemplo:
+
+```zsh
+plugins=(
+  git
+  bundler
+  dotenv
+  macos
+  rake
+  rbenv
+  ruby
+)
+```
+
+Abaixo, estão alguns dos plugins mais utilizados e suas respectivas formas de instalação:
+
+##### zsh-history-substring-search
+
+Adiciona um histórico de pesquisa, na qual, ao digitar qualquer parte de um código, é dada asa respectivas correspondências.
+
+```zsh
+git clone https://github.com/zsh-users/zsh-history-substring-search.git $ZSH_CUSTOM/plugins/zsh-history-substring-search
+```
+
+Agora para definir ele como um dos plugins do seu ZSH, entre em `~/.zshrc`, procure uma parte com `plugins=()` e edite:
+
+```zsh
+plugins=( git dnf zsh-history-substring-search )
+```
+
+##### zsh-syntax-highlighting
+
+Adiciona syntax Highligth no nosso ZSH, facilitando você saber se o comando que está sendo digitado no momento está correto.
+
+```zsh
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+```
+
+Assim como o plugin anterior (e todos os outros), adicione ao `~/.zshrc`:
+
+```zsh
+plugins=( git dnf zsh-history-substring-search zsh-syntax-highlighting )
+```
+
+##### zsh-autosuggestions
+
+Adiciona uma auto-sugestão no ZSH baseada em seu histórico, tornando mais fácil a repetição de comandos já utilizados.
+
+```zsh
+git clone https://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions
+```
+
+Da mesma forma:
+
+```zsh
+plugins=( git dnf zsh-history-substring-search zsh-syntax-highlighting zsh-autosuggestions)
+```
+
 ### Starship
 
 > [Nerd Font][6]
@@ -581,6 +698,9 @@ Neste post, discutimos várias maneiras de personalizar o Windows Terminal. Espe
 [15]: https://www.guidgenerator.com/
 [16]: https://docs.microsoft.com/en-us/windows/terminal/command-line-arguments
 [17]: ../Docs/CONTRIBUTING.md
+[18]: https://github.com/powerline/fonts
+[19]: https://github.com/JonathanTSilva/HL-Linux/blob/main/Articles/terminalLinux.md
+[20]: https://github.com/ohmyzsh/ohmyzsh
 
 <!-- IMAGENS -->
 [wsl-installation]: ../Images/wsl-installation.png
