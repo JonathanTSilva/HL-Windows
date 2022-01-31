@@ -12,7 +12,7 @@
     - [... por atalho personalizado](#-por-atalho-personalizado)
     - [... pelo `Executar`](#-pelo-executar)
     - [... pelo explorador de arquivos](#-pelo-explorador-de-arquivos)
-  - [Instalar o WSL (Windows Subsystem for Linux)](#instalar-o-wsl-windows-subsystem-for-linux)
+  - [Instalar o WSL (*Windows Subsystem for Linux*)](#instalar-o-wsl-windows-subsystem-for-linux)
   - [Personalização do Windows Terminal](#personalização-do-windows-terminal)
     - [Tornar o Windows Terminal como padrão](#tornar-o-windows-terminal-como-padrão)
     - [Personalizar as guias](#personalizar-as-guias)
@@ -28,21 +28,21 @@
       - [Trocar de fonte no terminal do Windows](#trocar-de-fonte-no-terminal-do-windows)
       - [Trocar de fonte no terminal do VSCode](#trocar-de-fonte-no-terminal-do-vscode)
     - [Oh My Posh](#oh-my-posh)
-      - [Instalação do Oh My Posh](#instalação-do-oh-my-posh)
-      - [Definindo o Oh My Posh como padrão](#definindo-o-oh-my-posh-como-padrão)
-      - [Alterando o tema](#alterando-o-tema)
-      - [Mostrando ícones nos diretórios e arquivos](#mostrando-ícones-nos-diretórios-e-arquivos)
+      - [Instalar do Oh My Posh](#instalar-do-oh-my-posh)
+      - [Definir o Oh My Posh como padrão](#definir-o-oh-my-posh-como-padrão)
+      - [Alterar o tema](#alterar-o-tema)
+      - [Mostrar ícones nos diretórios e arquivos](#mostrar-ícones-nos-diretórios-e-arquivos)
       - [Perfil totalmente personalizado](#perfil-totalmente-personalizado)
     - [Oh My Zsh](#oh-my-zsh)
-      - [Instalando o Oh My Zsh](#instalando-o-oh-my-zsh)
-      - [Alterando o tema e instalando temas externos](#alterando-o-tema-e-instalando-temas-externos)
-      - [Instalando e habilitando plugins](#instalando-e-habilitando-plugins)
+      - [Instalar o Oh My Zsh](#instalar-o-oh-my-zsh)
+      - [Alterar o tema e instalar temas externos](#alterar-o-tema-e-instalar-temas-externos)
+      - [Instalar e habilitar plugins](#instalar-e-habilitar-plugins)
         - [zsh-history-substring-search](#zsh-history-substring-search)
         - [zsh-syntax-highlighting](#zsh-syntax-highlighting)
         - [zsh-autosuggestions](#zsh-autosuggestions)
     - [Starship](#starship)
-      - [Instalação do Starship](#instalação-do-starship)
-      - [Configuração do shell para utilizar Starship](#configuração-do-shell-para-utilizar-starship)
+      - [Instalar o Starship](#instalar-o-starship)
+      - [Configurar o shell para utilizar Starship](#configurar-o-shell-para-utilizar-starship)
         - [PowerShell](#powershell)
         - [ZSH](#zsh)
       - [Configurar o Starship](#configurar-o-starship)
@@ -54,9 +54,9 @@
     - [Instalar o módulo Z](#instalar-o-módulo-z)
   - [Conclusão](#conclusão)
 
-O Windows Terminal oferece uma experiência de linha de comando muito aprimorada no Windows 10 (superior). Está repleto de características úteis como uma aceleração de GPU, tabs, painéis, temas e atalhos, além de um suporte completo para diferentes ambientes, tal como o PowerShell, Prompt de Comando e WSL. Neste artigo, será descrito algumas maneiras de adaptar as experiências com o terminal de acordo com suas necessidades, alé, de dicas e truques para tornar sua experiência muito melhor.
+O Windows Terminal oferece uma experiência de linha de comando muito aprimorada no Windows 10 (ou superior). Está repleto de características úteis como uma aceleração de GPU, *tabs*, painéis, temas e atalhos, além de um suporte completo para diferentes ambientes, tal como o PowerShell, Prompt de Comando e WSL. Neste artigo, serão descritas algumas maneiras de adaptar as experiências com o terminal de acordo com suas necessidades, além de dicas e truques para tornar sua experiência muito melhor.
 
-O aplicativo do Windows Terminal está disponível na Microsoft Store, mas também na sua [página de lançamentos do GitHub][1]. Entretanto, caso faça download por lá, perderá as atualizações automáticas. Há uma outra opção também para quem quer estar na frente dos próprios lançamentos, que é o Windows Terminal Preview, que contém os recursos mais recentes à medida que são desenvolvidos.
+O aplicativo do Windows Terminal está disponível para download na Microsoft Store, mas também na sua [página de lançamentos do GitHub][1]. Entretanto, caso opte pela segunda opção, perderá as atualizações automáticas. Há uma outra opção para quem quer estar na frente dos próprios lançamentos, o Windows Terminal Preview, que contém os recursos mais recentes à medida que são desenvolvidos.
 
 Uma vez instalado, ao inciar o Windows Terminal será criado um perfil padrão que mostrará os seus shells na ordem: PowerShell, Prompt de Comando, todas as distribuições WSL instaladas e o Azure Cloud Shell. Ao final deste artigo, você conseguirá atualizá-lo de acordo com sua preferência.
 
@@ -64,7 +64,7 @@ O primeiro passo a ser realizado é instalar todas os shells que você precisa, 
 
 ## Abrindo o Windows Terminal
 
-Apesar desta seção parecer um tanto quanto dispensável, aqui serão expostas diversas maneiras e dicas para agilizar o processo na hora de abrir o terminal. Algumas são tão simples que vale apenas relembrar, como abrir pelo menu `Pesquisar`, pelo menu `Iniciar` ou `WinX` (no caso do Windows 11), e pelo menu de contexto, ao clicar com o botão direito em uma pasta no explorador de arquivos e selecionar `Abrir no Terminal do Windows`.
+Apesar desta seção parecer um tanto quanto dispensável, aqui serão expostas diversas maneiras e dicas para agilizar o processo na hora de abrir o terminal. Algumas são tão simples que vale apenas relembrar, como: abrir pelo menu `Pesquisar`, pelo menu `Iniciar` ou `WinX` (no caso do Windows 11), e pelo menu de contexto, ao clicar com o botão direito em uma pasta no explorador de arquivos e selecionar `Abrir no Terminal do Windows`.
 
 ### ... por atalho
 
@@ -73,7 +73,7 @@ Exemplo: <kbd>Win</kbd>+<kbd>2</kbd>.
 
 ### ... por atalho personalizado
 
-Caso não se adapte com o atalho padrão do Windows, há a opção de personalizá-lo com o AutoHotKey para executar ou gerar uma instância de terminal do Windows. Para personalização, instale o [AutoHotKey][2] na máquina e siga os seguintes passos:
+Caso não se adapte com o atalho padrão do Windows, há a opção de personalizá-lo com o [AutoHotKey][2] para executar ou gerar uma instância de terminal do Windows. Para personalização, instale-o na máquina e siga os seguintes passos:
 
 1. Crie um novo arquivo de texto com uma extensão `.ahk`;
 2. Copie e cole o código abaixo dentro do arquivo;
@@ -101,19 +101,19 @@ SetWinDelay, 0
 Return
 ```
 
-Feito isso, você poderá abrir o terminal do Windows com um atalho personalizado. O script vinculado utiliza <kbd>Win</kbd>+<kbd>'</kbd>, mas é possível alterá-lo para a combinação de teclas de sua preferência. O problema deste método é que para seu correto funcionamento, o script precisa ser executado manualmente todas as vezes. Para automatizar este processo, siga o tópico ["How do I put my hotkeys and hotstrings into effect automatically every time I start my PC?"][3], FAQ do AutoHotKey.
+Feito isso, você poderá abrir o terminal do Windows com um atalho personalizado. O script vinculado utiliza <kbd>Win</kbd>+<kbd>'</kbd>, mas é possível alterá-lo para a combinação de teclas de sua preferência. O problema deste método é que, para seu correto funcionamento, o script precisa ser executado manualmente todas as vezes. Para automatizar este processo, siga o tópico ["How do I put my hotkeys and hotstrings into effect automatically every time I start my PC?"][3], FAQ do AutoHotKey.
 
 ### ... pelo `Executar`
 
-Outra maneira rápida para esta inicialização, abra o menu Executar (<kbd>Win</kbd>+<kbd>R</kbd>) e digite `wt`, e voilà! Windows Terminal aberto. Vale ressaltar que este é o mnemônico do processo do Windows Terminal. Assim, é possível abri-lo através de um outro shell com o mesmo comando (como é feito com semelhantes, e.g. `zsh`, `bash`, `cmd`).
+Outra maneira rápida para esta inicialização: abra o menu Executar (<kbd>Win</kbd>+<kbd>R</kbd>) e digite `wt`, e *voilà*! Windows Terminal aberto. Vale ressaltar que este é o mnemônico do processo do Windows Terminal. Assim, é possível abri-lo através de um outro shell com o mesmo comando (como é feito com semelhantes, e.g. `zsh`, `bash`, `cmd`).
 
 ### ... pelo explorador de arquivos
 
 Esta dica é muito útil para aqueles que não tem a opção do Windows Terminal no menu de contexto. Estando em uma pasta de trabalho no explorador de arquivo, selecionar a barra de endereços (<kbd>Ctrl</kbd>+<kbd>L</kbd>) e digitar `wt -d .` para abrir o Windows Terminal na pasta especificada.
 
-## Instalar o WSL (Windows Subsystem for Linux)
+## Instalar o WSL (*Windows Subsystem for Linux*)
 
-A princípio, em uma instalação mais antiga, era necessário configurar sua estação para receber a virtualização por WSL, habilitando os recursos opcionais **"Plataforma de Maquina Virtual"** e **"Subsistema do Windows para Linux"**. Entretanto, o WSL atual já realiza a instalação automática de todas as dependências necessárias. Todavia, abaixo está como podemos ativar estes recursos manualmente, apresentando duas maneiras de realizar tal ativação: Por linha de comando e pelo programa **Recursos do Windows**.
+A princípio, em uma instalação mais antiga, era necessário configurar sua estação para receber a virtualização por WSL habilitando os recursos opcionais **"Plataforma de Maquina Virtual"** e **"Subsistema do Windows para Linux"**. Entretanto, o WSL atual já realiza a instalação automática de todas as dependências necessárias. Mesmo assim, abaixo está um breve tutorial sobre como podemos ativar estes recursos manualmente, apresentando duas maneiras de realizar tal ativação: por linha de comando e pelo programa **Recursos do Windows**.
 
 - Por linha de comando:
 
@@ -125,7 +125,7 @@ Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-L
 
 Abra o **Recursos do Windows** e ative os itens **"Plataforma de Maquina Virtual"** e **"Subsistema do Windows para Linux"**.
 
-Sem mais delongas, é possível instalar tudo o que precisa para executar o WSL (Subsistema do Windows para Linux) inserindo este comando no PowerShell administrador ou no prompt de comando do Windows e reiniciando o computador:
+Sem mais delongas, é possível instalar tudo o que precisa para executar o WSL (Subsistema do Windows para Linux) inserindo este comando no PowerShell administrador ou no prompt de comando do Windows e, ao seu término, reiniciar o computador:
 
 ```powershell
 wsl --install
@@ -144,7 +144,7 @@ wsl --list --all
 wsl --list --running
 ```
 
-O comando `wsl --shutdown` é um caminho rápido para reiniciar as distribuições do WSL 2, mas ele desligará todas as distribuições em execução e, portanto, será usado com sabedoria.
+O comando `wsl --shutdown` é um caminho rápido para reiniciar as distribuições do WSL 2, mas ele desligará todas as distribuições em execução e, portanto, deve ser usufruído com sabedoria.
 
 > **Nota:** lembre de instalar o novo **Powershell** na loja da Microsoft para melhorar sua experiência.
 
@@ -178,11 +178,11 @@ Como citado anteriormente, tem-se dois arquivos de configuração do Windows Ter
 ```json
 "defaults":
 {
-    // SETTINGS TO APPLY TO ALL PROFILES
+    // Configurações aplicadas para todos os perfis
 },
 "list":
 [
-    // PROFILE OBJECTS
+    // Objetos do perfil
 ]
 ```
 
@@ -201,7 +201,7 @@ Para alterar a ordem de seu layout no terminal, abra `settings.json`, localize o
 
 #### Alterar o diretório inicial
 
-O diretório inicial para todos os shells é o diretório de usuário do Windows ( `%UserProfile%`) por padrão, mas você provavelmente deseja o diretório inicial do Linux em seus perfis WSL. Você pode adicionar o parâmetro `startingDirectory` ao seu objeto de perfil de distribuição WSL conforme mostrado abaixo para substituir essa configuração.
+O diretório inicial para todos os shells é o diretório de usuário do Windows (`%UserProfile%`) por padrão, mas você provavelmente deseja o diretório inicial do Linux em seus perfis WSL. Você pode adicionar o parâmetro `startingDirectory` ao seu objeto de perfil de distribuição WSL conforme mostrado abaixo para substituir essa configuração.
 
 ```json
 {
@@ -362,11 +362,13 @@ No Visual Studio Code é possível também alterar de duas formas, por usuário 
 
 O Oh My Posh é uma engine customizada de prompt para qualquer shell que apresenta a habilidade de ajustar a string do prompt como uma variável ou função. Ele suporta todos os shells populares no Linux, macOS e Windows, incluindo **Bash**, **Fish**, **Zsh**, **Powershell** e outros, tornando possível obter um prompt consistente, mesmo que você alterne frequentemente entre diferentes shells.
 
-#### Instalação do Oh My Posh
+![omp][omp]
+
+#### Instalar do Oh My Posh
 
 Neste artigo, o foco será sua utilização no PowerShell. Entretanto, há diversas formas de realizar a instalação do Oh My Posh, podendo ser acompanhadas pela [página principal do projeto][4], ou pela [galeria de pacotes do PowerShell][5].
 
-> **Nota:** Ao usar oh-my-posh dentro do WSL, certifique-se de seguir o guia de instalação do linux .
+> **Nota:** Ao usar Oh My Posh dentro do WSL, certifique-se de seguir o guia de instalação do linux .
 
 No Windows, utilizando o `winget` (Windows Package Manager CLI - gerenciador de pacotes da Microsoft), apenas execute o comando abaixo em seu prompt:
 
@@ -376,7 +378,7 @@ winget install JanDeDobbeleer.OhMyPosh
 
 Isso instala o `oh-my-posh.exe` e os últimos [temas do Oh My Posh][7]. Para conferir, basta copiar este comando do executável no cmd e será possível visualizar sua interface. Porém, só realizar este procedimento não o colocará como a engine padrão do PowerShell.
 
-#### Definindo o Oh My Posh como padrão
+#### Definir o Oh My Posh como padrão
 
 Para defini-lo como padrão do sistema, é necessário editar o script de perfil do PowerShell. Para encontrar a localização deste *profile*, basta dar o comando `echo` e para abrir, `notepad` ou o comando do seu editor de texto (`code`):
 
@@ -399,9 +401,9 @@ Depois de adicionado, recarregue seu perfil para que as alterações entrem em v
 . $PROFILE 
 ```
 
-#### Alterando o tema
+#### Alterar o tema
 
-O tema padãro **jandedobbeleer.omp.json** exibe os casos de uso mais comuns em seu prompt. No entanto, se você quer ir mais além para explorar funcionalidades adicionais, siga as etapas adicionais abaixo para te auxiliar neste começo.
+O tema padrão **jandedobbeleer.omp.json** exibe os casos de uso mais comuns em seu prompt. No entanto, se você quer ir mais além para explorar funcionalidades adicionais, siga as etapas adicionais abaixo para te auxiliar neste começo.
 
 Explore os [temas oficiais do Oh My Posh][7]. Caso encontre algum que lhe agrade, basta conferir se ele já está baixado no diretório de temas (`~\AppData\Local\Programs\oh-my-posh\themes`) e alterar no arquivo de perfil do PowerShell, como exemplo abaixo:
 
@@ -426,7 +428,7 @@ oh - meu - posh -- init -- shell pwsh -- config "~/.mytheme.omp.json" | Invocar-
 
 O tema que utilizo atualmente é o desenvolvido por **shanselman**, chamado **ohmyposhv3-v2.json** e está disponível na [página de gist][22] do desenvolvedor, assim como o arquivo `$PROFILE` personalizado.
 
-#### Mostrando ícones nos diretórios e arquivos
+#### Mostrar ícones nos diretórios e arquivos
 
 Seu prompt não é suficiente? Isso porque sua listagem de diretórios precisa de cores e ícones!
 
@@ -444,7 +446,7 @@ Import-Module -Name Terminal-Icons
 
 #### Perfil totalmente personalizado
 
-Para uma última personalização, utilizo o arquivo profile, também desenvolvido por [shanselman][22], que adiciona outros módulos como o PSReadLine. Entretanto, para sua utilização, são necessárias algumas alterações e downloads, que foram realizadas e disponibilizadas na minha aba de gist: https://gist.github.com/JonathanTSilva.
+Para uma última personalização, utilizo o arquivo profile, também desenvolvido por [shanselman][22], que adiciona outros módulos como o PSReadLine. Entretanto, para sua utilização, são necessárias algumas alterações e downloads, que foram realizadas e disponibilizadas na minha aba de gist: [github.com/JonathanTSilva][24].
 
 Faça o download da versão mais recente do PSReadLine para evitar possíveis problemas. Sempre se atualize na [galeria do PowerShell][23].
 
@@ -460,7 +462,9 @@ Pronto! Seu PowerShell está totalmente personalizado. *Enjoy*!
 
 [Oh My Zsh][20] é uma estrutura agradável, de código aberto e orientada para a comunidade para gerenciar sua configuração Zsh. Vem com milhares de funções úteis, auxiliares, plugins, temas e algumas coisas que fazem você gritar. Suporta o shell Linux **Zsh**. Por isso, caso não tenha o ZSH instalado e nem como seu terminal padrão, aconselho a leitura da seção **Instalando o Zsh e alterando para shell padrão** do artigo [Customização do terminal do Linux][19]. Da mesma forma, leia a seção **Powerline Fonts** para acompanhar a instalação das fontes no ambiente Linux.
 
-#### Instalando o Oh My Zsh
+![omz][omz]
+
+#### Instalar o Oh My Zsh
 
 Toda a documentação mais detalhada pode ser lida na [página **Oh My Zsh** do GitHub][1].
 
@@ -478,7 +482,7 @@ sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools
 
 Com isso, o Oh My Zsh estará instalado na sua máquina e assim que o terminal for aberto novamente, já estará ativado e o arquivo `.zshrc`, alterado.
 
-#### Alterando o tema e instalando temas externos
+#### Alterar o tema e instalar temas externos
 
 Qualquer alteração a ser feita no Oh My Zsh, deve ser realizada dentro do arquivo `.zshrc`. Uma delas é a alteração de tema, na qual deve ser realizada alterando o valor do parâmetro a seguir com o nome das extensões fornecidas pelo zsh:
 
@@ -499,7 +503,7 @@ echo 'source ~/.oh-my-zsh/themes/powerlevel10k/powerlevel10k.zsh-theme' >>~/.zsh
 ZSH_THEME="powerlevel10k/powerlevel10k"
 ```
 
-#### Instalando e habilitando plugins
+#### Instalar e habilitar plugins
 
 Existem vários plugins que poderão ser utilizados sem nenhuma instalação adicional. Para ver a lista de plugins que por padrão estão no diretório `~/.oh-my-zsh/plugins/` execute:
 
@@ -540,7 +544,7 @@ plugins=( git dnf zsh-history-substring-search )
 
 ##### zsh-syntax-highlighting
 
-Adiciona syntax Highligth no nosso ZSH, facilitando você saber se o comando que está sendo digitado no momento está correto.
+Adiciona syntax Highlight no nosso ZSH, facilitando você saber se o comando que está sendo digitado no momento está correto.
 
 ```zsh
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
@@ -574,7 +578,7 @@ O [Starship][11] fornece uma experiência de prompt de comando personalizada que
 
 ![starship][starship]
 
-#### Instalação do Starship
+#### Instalar o Starship
 
 Pode ser realizada por qualquer um dos seguintes gerenciadores de pacotes. Verifique a documentação para maiores informações:
 
@@ -585,7 +589,7 @@ Pode ser realizada por qualquer um dos seguintes gerenciadores de pacotes. Verif
 | [conda-forge]   | `conda install -c conda-forge starship` |
 | [Scoop]         | `scoop install starship`                |
 
-#### Configuração do shell para utilizar Starship
+#### Configurar o shell para utilizar Starship
 
 Configure seu shell para inicializar com o Starship. Pela documentação oficial da engine, há a opção para os shells mais utilizados, porém mostraremos apenas para o ZSH e Powershell:
 
@@ -739,7 +743,9 @@ Pode ser útil fazer SSH automaticamente em máquinas remotas através do Termin
 
 O parâmetro `guid` deve ser único entre os perfis. Você pode fazer alterações em um existente ou gerá-lo online com o [Guid Generator][15]. Em relação ao `icon`, você pode usar um caractere emoji (v1.5 ou posterior) ou digitar o caminho para um arquivo de imagem adequado (.ico). Depois de salvar o arquivo de configurações, você deverá ver sua nova entrada semelhante à captura de tela abaixo.
 
-![ssh][sshProfile]
+<p align="center">
+  <img width="300px" src="https://ik.imagekit.io/freshman/windows-terminal-25_NTXSvREH3mQ_.png" />
+</p>
 
 Depois de clicar na entrada, se conectará automaticamente ao servidor remoto em sua distribuição Linux preferida.
 
@@ -799,6 +805,7 @@ Neste post, discutimos várias maneiras de personalizar o Windows Terminal. Espe
 [21]: https://ohmyposh.dev/docs/config-overview
 [22]: https://gist.github.com/shanselman/
 [23]: https://www.powershellgallery.com/packages/PSReadLine/2.1.0
+[24]: https://gist.github.com/JonathanTSilva
 
 <!-- IMAGENS -->
 [wsl-installation]: ../Images/wsl-installation.png
@@ -806,3 +813,5 @@ Neste post, discutimos várias maneiras de personalizar o Windows Terminal. Espe
 [starship]: https://ik.imagekit.io/freshman/starship-fish_S9i51r-Tol.png
 [sshProfile]: https://ik.imagekit.io/freshman/windows-terminal-25_NTXSvREH3mQ_.png
 [iconsDir]: ../Images/iconsDir.png
+[omp]: https://docs.microsoft.com/pt-br/windows/terminal/images/custom-prompt.png
+[omz]: https://pythonautomationtutorial.com/static/img/python-oh-my-zsh-eg.png
