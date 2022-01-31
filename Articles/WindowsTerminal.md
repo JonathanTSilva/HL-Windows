@@ -28,7 +28,7 @@
       - [Trocar de fonte no terminal do Windows](#trocar-de-fonte-no-terminal-do-windows)
       - [Trocar de fonte no terminal do VSCode](#trocar-de-fonte-no-terminal-do-vscode)
     - [Oh My Posh](#oh-my-posh)
-      - [Instalar do Oh My Posh](#instalar-do-oh-my-posh)
+      - [Instalar o Oh My Posh](#instalar-o-oh-my-posh)
       - [Definir o Oh My Posh como padrão](#definir-o-oh-my-posh-como-padrão)
       - [Alterar o tema](#alterar-o-tema)
       - [Mostrar ícones nos diretórios e arquivos](#mostrar-ícones-nos-diretórios-e-arquivos)
@@ -364,11 +364,11 @@ O Oh My Posh é uma engine customizada de prompt para qualquer shell que apresen
 
 ![omp][omp]
 
-#### Instalar do Oh My Posh
+#### Instalar o Oh My Posh
 
 Neste artigo, o foco será sua utilização no PowerShell. Entretanto, há diversas formas de realizar a instalação do Oh My Posh, podendo ser acompanhadas pela [página principal do projeto][4], ou pela [galeria de pacotes do PowerShell][5].
 
-> **Nota:** Ao usar Oh My Posh dentro do WSL, certifique-se de seguir o guia de instalação do linux .
+> **Nota:** Ao usar Oh My Posh dentro do WSL, certifique-se de seguir o guia de instalação do linux.
 
 No Windows, utilizando o `winget` (Windows Package Manager CLI - gerenciador de pacotes da Microsoft), apenas execute o comando abaixo em seu prompt:
 
