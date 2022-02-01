@@ -424,7 +424,7 @@ oh - meu - posh -- init -- shell pwsh -- config "~/.mytheme.omp.json" | Invocar-
 ```
 
 > **Nota:** Ao usar oh-my-posh no Windows e no WSL, saiba que você pode compartilhar seu tema com o WSL apontando para um tema na pasta pessoal do usuário do Windows. Dentro do WSL, substitua `~` pelo seguinte caminho: `/mnt/c/Users/<WINDOWSUSERNAME>`.
-> **Cuidado:** Para temas baixados e colocados naquele diretório de *themes* do Oh My Posh, é necessário adicionar o caminho inteiro do diretório, como `C:\Users\jonathan\AppData\Local\Programs\oh-my-posh\themes\ohmyposhv3-v2.json` ou a pasta em que ele se encontra.
+> **Cuidado:** Para temas baixados e colocados naquele diretório de *themes* do Oh My Posh, é necessário adicionar o caminho inteiro do diretório, como `C:\Users\jonathan\AppData\Local\Programs\oh-my-posh\themes\ohmyposhv3-v2.json`, ou a pasta em que ele se encontra.
 
 O tema que utilizo atualmente é o desenvolvido por **shanselman**, chamado **ohmyposhv3-v2.json** e está disponível na [página de gist][22] do desenvolvedor, assim como o arquivo `$PROFILE` personalizado.
 
