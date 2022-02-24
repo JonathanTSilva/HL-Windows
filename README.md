@@ -42,15 +42,15 @@
     <a href="#contato">Contato</a>
 </details>
 
-## Sobre o Projeto
+## 📃 Sobre o Projeto
 
 Este projeto pertence à uma série de repositórios denominada HomeLab. Essa sequência foi criada a fim de agrupar todos os estudos realizados em determinada area, neste caso, o Windows. Documenta toda a experiência de um iniciante neste kernel, contendo _insights_, dicas, resoluções de problemas e muitas outras coisas interessantes que fazem valer a pena o consumo e contribuição ao projeto **HomeLab - Windows**! Aproveite e sinta-se a vontade para comentar, tirar suas dúvidas, criticar e, principalmente, contribuir. ⊞
 
-## Índice
+## 🔎 Índice
 
 - [Customização do Windows Terminal][5]
 
-## Contribuindo
+## 🤝 Contribuindo
 
 Se você quer contribuir com este projeto e aprimorá-lo, sua ajuda é sempre bem-vinda! :tada:
 
@@ -77,11 +77,11 @@ Se você quer contribuir com este projeto e aprimorá-lo, sua ajuda é sempre be
 <!-- MIT License -->
 <a href="https://github.com/JonathanTSilva/HL-Windows/blob/main/LICENSE"><img width="100px" src="https://miro.medium.com/max/886/1*C87EjxGeMPrkTuVRVWVg4w.png" align="right" /></a>
 
-## Licença
+## 📝 Licença
 
 Distribuída por **MIT License**. Veja [LICENSE][2] para mais informações.
 
-## Contato
+## 📧 Contato
 
 :globe_with_meridians: [Jonathan T. da Silva][3] <br>
 :email: jonathantobias2009@hotmail.com <br>
