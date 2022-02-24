@@ -16,19 +16,19 @@
 <!-- PROJECT SHIELDS -->
 <p align="center">
   <a href="https://github.com/JonathanTSilva/HL-Windows/graphs/contributors">
-    <img src="https://img.shields.io/github/contributors/JonathanTSilva/HL-Windows.svg?style=flat" alt="Contributors">
+    <img src="https://img.shields.io/github/contributors/JonathanTSilva/HL-Windows.svg?" alt="Contributors">
   </a>
   <a href="https://github.com/JonathanTSilva/HL-Windows/network/members">
-    <img src="https://img.shields.io/github/forks/JonathanTSilva/HL-Windows.svg?style=flat" alt="Members">
+    <img src="https://img.shields.io/github/forks/JonathanTSilva/HL-Windows.svg?" alt="Members">
   </a>
   <a href="https://github.com/JonathanTSilva/HL-Windows/stargazers">
-    <img src="https://img.shields.io/github/stars/JonathanTSilva/HL-Windows.svg?style=flat" alt="Stargazers">
+    <img src="https://img.shields.io/github/stars/JonathanTSilva/HL-Windows.svg?" alt="Stargazers">
   </a>
   <a href="https://github.com/JonathanTSilva/HL-Windows/issues">
-    <img src="https://img.shields.io/github/issues/JonathanTSilva/HL-Windows.svg?style=flat" alt="Issues">
+    <img src="https://img.shields.io/github/issues/JonathanTSilva/HL-Windows.svg?" alt="Issues">
   </a>
   <a href="https://github.com/JonathanTSilva/HL-Windows/blob/main/LICENSE">
-    <img src="https://img.shields.io/github/license/JonathanTSilva/HL-Windows.svg?style=flat" alt="License">
+    <img src="https://img.shields.io/github/license/JonathanTSilva/HL-Windows.svg?" alt="License">
   </a>
 </p>
 
@@ -52,7 +52,7 @@ Este projeto pertence à uma série de repositórios denominada HomeLab. Essa se
 
 ## Contribuindo
 
-Se você quer contribuir com este projeto e aprimorá-lo, sua ajuda é sempre bem vinda! :tada:
+Se você quer contribuir com este projeto e aprimorá-lo, sua ajuda é sempre bem-vinda! :tada:
 
 **Como fazer um _pull request_ corretamente:**
 
