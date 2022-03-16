@@ -1,5 +1,5 @@
 <!-- LOGO DIREITO -->
-<a href="#um-pouco-mais-sobre-o-wsl"><img width="200px" src="../../Images/wsl.png" align="right" /></a>
+<a href="#um-pouco-mais-sobre-o-wsl"><img width="300px" src="../../Images/wsl.png" align="right" /></a>
 
 # Um pouco mais sobre o WSL
 
