@@ -16,10 +16,30 @@
   - [1. Introdução](#1-introdução)
   - [Rede](#rede)
 
-<!-- VOLTAR AO ÍNICIO -->
+<!-- VOLTAR AO INÍCIO -->
 <a href="#"><img width="40px" src="https://github.com/JonathanTSilva/JonathanTSilva/blob/main/Images/back-to-top.png" align="right" /></a>
 
 ## 1. Introdução
+
+WSL é a sigla para *Windows Subsystem for Linux*  ou na tradução: Subsistema do Windows para Linux. Na prática, o WSL permite que os usuários executem um ambiente GNU/Linux diretamente no Windows, sem a necessidade de execução de uma máquina virtual completa ou instalação de dual boot.
+
+Logo, o WSL2 (Windows Subsystem for Linux versão 2) é uma nova versão da arquitetura que permite usar o Linux sobre o Windows 10 nativamente (usando uma máquina virtual leve) e substitui o WSL.
+
+Para instá-lo em sua máquina, execute o seguinte comando em um terminal como Administrador:
+
+```powershell
+wsl --install
+```
+
+Isso irá ativar dois recursos do sistema:
+
+- Virtual Machine Platform;
+- Windows Subsystem for Linux.
+
+Após isso, basta instalar sua distribuição preferida por linha de comando ou pela Microsoft Store.
+
+<!-- VOLTAR AO INÍCIO -->
+<a href="#"><img width="40px" src="https://github.com/JonathanTSilva/JonathanTSilva/blob/main/Images/back-to-top.png" align="right" /></a>
 
 ## Rede
 
