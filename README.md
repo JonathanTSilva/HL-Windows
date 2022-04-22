@@ -74,8 +74,8 @@ Distribuída por **MIT License**. Veja [LICENSE][2] para mais informações.
 [2]: https://github.com/JonathanTSilva/HL-Windows/blob/main/LICENSE
 [3]: https://www.linkedin.com/in/JonathanTSilva/
 [4]: https://github.com/JonathanTSilva/HL-Windows
-[5]: https://github.com/JonathanTSilva/HL-Windows/blob/main/Articles/WindowsTerminal.md
-[6]: /Docs/Articles/WSL.md
+[5]: /Docs/Articles/windowsTerminal.md
+[6]: /Docs/Articles/wsl.md
 [7]: /Docs/CONTRIBUTING.md
 
 <!-- IMAGES -->
