@@ -83,12 +83,10 @@ if( $found ){
 #All the ports you want to forward separated by coma
 $ports=@(80,443,10000,3000,5000);
 
-
 #[Static ip]
 #You can change the addr to your ip config to listen to a specific address
 $addr='0.0.0.0';
 $ports_a = $ports -join ",";
-
 
 #Remove Firewall Exception Rules
 iex "Remove-NetFireWallRule -DisplayName 'WSL 2 Firewall Unlock' ";
@@ -105,6 +103,23 @@ for( $i = 0; $i -lt $ports.length; $i++ ){
 ```
 
 >**Nota:** há a possibilidade de instalar uma interface gráfica para as distribuições do WSL 2, com a aplicação . Para mais informações, leia [esse post][1] e [essa discussão no GitHub][2].
+
+## Backup
+
+Para realizar o backup de uma distro WSL, realize os seguintes passos:
+
+1. Execute um prompt de comando como Administrador;
+2. Determinar as distribuições Linux disponíveis: `wsl --list`;
+3. Criar um backup da distribuição WSL: `wsl --export DISTRO-NAME PATH\FILE-NAME.tar`;
+
+> **Nota:** se não for especificado um caminho, o backup será armazenado na raiz de “C:”.
+
+Para restaurar um backup já realizado anteriormente, siga com as etapas:
+
+1. Execute um prompt de comando como Administrador;
+2. Importar ou restaurar as distribuições Linux do backup: `wsl --import DISTRO-NAME INSTALL-LOCATION PATH\FILE-NAME.tar`;
+3. Confirmar que a distribuição foi restaurada: `wsl --list`;
+4. Iniciar a distribuição no Windows Subsystem para Linux: `wsl --distribution NAME-DISTRO`.
 
 <!-- MARKDOWN LINKS -->
 <!-- SITES -->
